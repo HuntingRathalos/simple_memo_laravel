@@ -28,5 +28,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/memo/delete', [MemoController::class, 'delete'])->name('memo.delete');
 
 });
+Route::get('logout', [LoginController::class, 'logout'])->name('memo.logout');
+
 
 Auth::routes();
